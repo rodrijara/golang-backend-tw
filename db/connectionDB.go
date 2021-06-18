@@ -35,8 +35,7 @@ func ConnectDataBase() *mongo.Client {
 
 // CheckConnection evaluates a successful connection to DB
 func CheckConnection() int {
-	client, err := mongo.Connect(context.TODO(), clientOptions)
-	err = client.Ping(context.TODO(), nil)
+	err := MongoConnection.Ping(context.TODO(), nil)
 	if err != nil {
 		return 0
 	}
