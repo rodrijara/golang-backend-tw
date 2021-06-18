@@ -19,5 +19,5 @@ func Handlers() {
 
 	handler := cors.AllowAll().Handler(router) // give access permissions from everywhere
 
-	log.Fatal(http.ListenAndServe(":"+PORT, handler)) 
+	log.Println(http.ListenAndServe(":"+PORT, handler)) 
 }
